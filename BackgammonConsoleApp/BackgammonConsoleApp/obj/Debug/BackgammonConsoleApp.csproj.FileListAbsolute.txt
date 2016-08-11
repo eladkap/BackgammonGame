@@ -1,0 +1,9 @@
+C:\Users\elad\AppData\Local\Temporary Projects\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.exe.config
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.exe.config
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.exe
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.pdb
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\Backgammon.dll
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\Backgammon.pdb
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.exe
+C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.pdb

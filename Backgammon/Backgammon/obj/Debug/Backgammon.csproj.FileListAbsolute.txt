@@ -1,0 +1,5 @@
+C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\obj\Debug\Backgammon.csprojResolveAssemblyReference.cache
+C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\bin\Debug\Backgammon.dll
+C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\bin\Debug\Backgammon.pdb
+C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\obj\Debug\Backgammon.dll
+C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\obj\Debug\Backgammon.pdb
