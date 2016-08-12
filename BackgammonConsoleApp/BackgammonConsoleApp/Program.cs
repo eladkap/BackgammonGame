@@ -65,10 +65,11 @@ namespace BackgammonConsoleApp
             while (tie);
             startingPlayer = result1 > result2 ? 0 : 1;
             game.SetCurrentPlayer(startingPlayer);
-        }         
+        }
 
         static bool TryPerformGeneralTransferStep(BackgammonGame game, int srcTri, int destTri)
         {
+
             if (game.CanRetrievalBePerformed())
             {
                 Console.WriteLine("You have captured checkers to retrive. Press any key and try again...");
@@ -132,40 +133,46 @@ namespace BackgammonConsoleApp
         }
 
         // action: 'o' for removal OR 'c' for retrieval
-        static bool TryPerformLegalStep(BackgammonGame game, char action, int srcTri, int destTri)
+        static void TryPerformLegalStep(object obj, PlayerMovedEventArgs e) // BackgammonGame game, char action, int srcTri, int destTri
         {
+            char action = e.action;
+            int srcTri = e.srcTri;
+            int destTri = e.destTri;
+            BackgammonGame game = (BackgammonGame)obj;
             srcTri--;
             destTri--;
             // transfer step
             if (action == 't')
             {
-                return TryPerformGeneralTransferStep(game, srcTri, destTri);
+                game.SetStepResult(TryPerformGeneralTransferStep(game, srcTri, destTri));
+                return;
             }
             // retrieval step
             if (action == 'c')
             {
-                return TryPerformRetrievalStep(game, destTri);
+                game.SetStepResult(TryPerformRetrievalStep(game, destTri));
+                return;
             }
             // removal step
             if (action == 'o')
             {
-                return TryPerformRemovalStep(game, srcTri);
+                game.SetStepResult(TryPerformRemovalStep(game, srcTri));
+                return;
             }
-            return false;
+            game.SetStepResult(false);
         }
 
         static void PerformStep(BackgammonGame game, int stepNum)
         {
-            char action = 'x';
-            int srcTri = -1;
-            int destTri = -1;
             bool success = false;
             do
             {
                 ShowGameStatus(game);
                 ChangeConsoleColor(game, game.CurrentTurn);
-                game.PlayersArray[game.CurrentTurn].ChooseStep(out action,out srcTri,out destTri);
-                success = TryPerformLegalStep(game, action, srcTri, destTri);
+                game.PlayersArray[game.CurrentTurn].PlayerMoved += TryPerformLegalStep;
+                game.PlayersArray[game.CurrentTurn].ChooseStep(game);
+                success = game.CurrentStepResult;
+                game.PlayersArray[game.CurrentTurn].PlayerMoved -= TryPerformLegalStep;
             }
             while (!success);
         }
