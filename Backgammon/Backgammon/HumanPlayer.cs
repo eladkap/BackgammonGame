@@ -68,16 +68,19 @@ namespace Backgammon
             } while (!isLegalInput);
         }
 
-        public override void ChooseStep(out char action, out int srcTri, out int destTri)
+        public override void ChooseStep(object obj)
         {
-            action = 'x';
-            srcTri = -1;
-            destTri = -1;
-            if (!_game.CanPlayerPerformAnyStep())
+            char action = 'x';
+            int srcTri = -1;
+            int destTri = -1;
+            BackgammonGame game = (BackgammonGame)obj;
+            if (!game.CanPlayerPerformAnyStep())
             {
                 return;
             }
             GetInput(out action, out srcTri, out destTri);
+            PlayerMovedEventArgs stepData = new PlayerMovedEventArgs(action, srcTri, destTri);
+            OnPlayerMoved(stepData);
         }
     }
 }

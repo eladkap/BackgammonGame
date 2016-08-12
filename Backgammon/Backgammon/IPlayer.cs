@@ -52,7 +52,7 @@
         /// <param name="srcTri">Source triangle</param>
         /// <param name="destTri">Destination triangle</param>
         /// <returns>An action 't' or 'c' or 'o' (transfer or retrieval or removal respectively)</returns>
-        void ChooseStep(out char action, out int srcTri, out int destTri);
+        void ChooseStep(object obj);
 
         /// <summary>
         /// Add hit checker after hit action.

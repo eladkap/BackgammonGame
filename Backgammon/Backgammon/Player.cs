@@ -4,6 +4,8 @@ namespace Backgammon
 {
     public abstract class Player : IPlayer
     {
+        public event EventHandler<PlayerMovedEventArgs> PlayerMoved;
+
         /// <summary>
         /// Player name.
         /// </summary>
@@ -48,6 +50,14 @@ namespace Backgammon
         {
         }
 
+        protected virtual void OnPlayerMoved(PlayerMovedEventArgs e)
+        {
+            if (PlayerMoved != null)
+            {
+                PlayerMoved(this.Game, e);
+            }
+        }
+
         public static bool IsLegalPlayerNumber(int playerNumber)
         {
             return playerNumber >= -1 && playerNumber <= 1;
@@ -60,6 +70,8 @@ namespace Backgammon
         public CheckerColor CheckerColor { get { return _checkerColor; } }
 
         public int CheckersOnBoard { get { return _checkersOnBoard; } }
+
+        public BackgammonGame Game { get { return _game; } }
 
         public void SetCheckersOnBoard(int checkersNum)
         {
@@ -123,7 +135,7 @@ namespace Backgammon
             _checkersOnBoard--;
         }
 
-        public abstract void ChooseStep(out char action,out int srcTri, out int destTri);
+        public abstract void ChooseStep(object obj);
 
         /// <summary>
         /// Returns the number of the rival player.

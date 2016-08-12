@@ -43,6 +43,11 @@ namespace Backgammon
         /// </summary>
         private int _currentTurn;
 
+        /// <summary>
+        /// The result of the current step - true for success and false for fail.
+        /// </summary>
+        private bool _currentStepResult;
+
         public BackgammonGame(Player player1, Player player2, int trianglesNumber, int diceFaces)
         {
             _initialCheckersNumber = player1.CheckersOnBoard;
@@ -52,6 +57,7 @@ namespace Backgammon
             _dice = new Dice(diceFaces);
             InitializePlayers(player1, player2);
             InitializeClassicBoard(trianglesNumber);
+            _currentStepResult = false;
         }
 
         public Player this[int playerIndex]
@@ -82,6 +88,13 @@ namespace Backgammon
         public List<int> DicesList { get { return _dicesList; } }
 
         public int DiceFaces { get { return _dice.Faces; } }
+
+        public bool CurrentStepResult { get { return _currentStepResult; } }
+
+        public void SetStepResult(bool result)
+        {
+            _currentStepResult = result;
+        }
 
         public void InitializePlayers(Player player1, Player player2)
         {
