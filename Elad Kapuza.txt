@@ -1,0 +1,70 @@
+*)Unfortunately, your design led to having logical code in the UI.
+Note that the UI should not do anything "too smart", such as passing a parameter to the BackgammonGame.RollDice Method, invoking the 'AddDiceToList' method or even setting the current player.
+According to your current design, each UI that will ever be written for your engine will have to do these operations, when in fact it is the engine's job to do them.
+The UI should merely reflect the engine's state, and attempt to change it according to a basic set of methods.
+The 'DecideFirstPlayer' should be a part of the engine as well..
+Initializing a game should never be left to the UI.. the game object should be initialized properly the seconds it is created.
+
+In fact, most of your UI's code belongs inside the game engine.
+
+*) Encapsulation:
+Program.cs (Line 172) : 
+'game.PlayersArray[game.CurrentTurn].PlayerMoved += TryPerformLegalStep;'
+In addition to the fact that this too does not belong in the UI, this also presents the following issue:
+
+Imagine that you work for a company whose product is the Backgammon game engine and your clients develop User interfaces for this engine.
+What would happen if the company decides to redesign the app and get rid of the PlayersArray, or change the structure of the player to be somewhat different?
+This would not be possible since the game object exposes the player and the array of players as its state, so changing anything or removing it will break your company's client code.
+
+Encapsulation is a very broad and important subject, and you should really do some reading regarding it.
+
+*)Unfortunately, your game does not work, every move I try is an illegal combination.
+
+*) when invoking an event, consider the problem with this code:
+
+Example taken from 'Player.OnPlayerMoved':
+
+  protected virtual void OnPlayerMoved(PlayerMovedEventArgs e)
+  {
+     if (PlayerMoved != null)
+     {
+                PlayerMoved(this.Game, e);
+     }
+  }
+
+the checking for null is not thread safe.. 
+the if statement could be true at the point of evaluation,
+After which any thread could unsubscribe a method from the delegate, that method could be the only left subscriber
+In such a case, your code would invoke a null multicast delegate, causing a null reference exception to be thrown.
+This can be avoided by applying the following fix to your code:
+
+ protected virtual void OnPlayerMoved(PlayerMovedEventArgs e)
+  {
+     var handler = PlayerMoved 
+     if (handler != null)
+     {
+       handler(this.Game, e);
+     }
+  }
+
+or, with the C# 6 null propagation syntax:
+
+ protected virtual void OnPlayerMoved(PlayerMovedEventArgs e)
+  {
+     PlayerMoved?.Invoke(this.Game, e);
+     
+  }
+
+*)Exception throwing
+It is very good that you chose to defend your code by throwing exceptions, however consider the type of exception you throw.
+ArgumentException or ArgumentNullException denote that something is wrong with the arguments of a method or setter.
+InvalidOperationException denotes that the code is attempting to do something incorrect
+
+*)HumanPlayer.TryParseInput is not a method that belongs in the game engine.
+It is something that belongs in the console UI application.
+
+What if you were to write a UI which accepts input in the form of mouse clicks and drag events, would you still need this method?
+The answer is no.
+
+*HumanPlayer.GetInput does not belong in the game engine
+The console class, which this method uses, means that your engine depends on a specific UI technology. The whole point of this excercise was to create a design which separates UI from logic.

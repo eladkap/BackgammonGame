@@ -3,3 +3,8 @@ C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\bin\De
 C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\bin\Debug\Backgammon.pdb
 C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\obj\Debug\Backgammon.dll
 C:\Users\elad\Documents\Visual Studio 2015\Projects\Backgammon\Backgammon\obj\Debug\Backgammon.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\Backgammon\Backgammon\bin\Debug\Backgammon.dll
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\Backgammon\Backgammon\bin\Debug\Backgammon.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\Backgammon\Backgammon\obj\Debug\Backgammon.csprojResolveAssemblyReference.cache
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\Backgammon\Backgammon\obj\Debug\Backgammon.dll
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\Backgammon\Backgammon\obj\Debug\Backgammon.pdb

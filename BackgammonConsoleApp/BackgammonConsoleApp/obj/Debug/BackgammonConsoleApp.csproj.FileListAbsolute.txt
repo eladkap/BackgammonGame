@@ -7,3 +7,11 @@ C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\Backgam
 C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.csprojResolveAssemblyReference.cache
 C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.exe
 C:\Users\elad\Documents\Visual Studio 2015\Projects\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.exe.config
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.exe
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.exe
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\BackgammonConsoleApp.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\Backgammon.dll
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\bin\Debug\Backgammon.pdb
+D:\git\codevalue\advanced-net-course\home-assignments\Backgammon\Elad Kapuza\BackgammonGame\BackgammonConsoleApp\BackgammonConsoleApp\obj\Debug\BackgammonConsoleApp.csprojResolveAssemblyReference.cache
